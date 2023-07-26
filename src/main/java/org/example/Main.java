@@ -11,12 +11,17 @@ public class Main {
         Observer firstSubscriber = new Subscriber("Max");
         Observer secondSubscriber = new Subscriber("Pit");
 
+        Observer hater1 = new Haters("John");
+        Observer hater2 = new Haters("Pol");
+
         jobSite.addObserver(firstSubscriber);
         jobSite.addObserver(secondSubscriber);
+        jobSite.addObserver(hater1);
+        jobSite.addObserver(hater2);
+
+
 
         jobSite.addVacancy("Third Java Position");
-
-
         jobSite.removeVacancy("First Java position");
 
 
