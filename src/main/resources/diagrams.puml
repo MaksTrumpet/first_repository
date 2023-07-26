@@ -1,0 +1,27 @@
+@startuml
+class Subscriber implements Observer {
++String name;
++public Subscriber(String name);
++public void handleEvent(List<String> vacancies)
+}
+class JavaDeveloperJobSite implements Observed {
+    +List<String> vacancies = new ArrayList<>();
+    +List<Observer> subscribers = new ArrayList<>();
+
++public void addVacancy(String vacancy);
++public void removeVacancy(String vacancy);
+
++public void addObserver(Observer );
++public void removeObserver(Observer );
++public void notifyObservers();
+interface Observed {
+   +public void addObserver(Observer );
+   +public void removeObserver(Observer );
+   +public void notifyObservers();
+}
+
+interface Observer {
++void handleEvent(List<String> );
+}
+
+@enduml
